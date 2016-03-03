@@ -36,7 +36,7 @@ public class EnemyController : MonoBehaviour {
 		// Check bottom boundary
 		if (currentPosition.y <= boundary.yMin) {
 			this._Reset();
-			this.gameController.ScoreValue += 100;
+			this.gameController.ScoreValue += 100;	//player gets points
 		}
 	}
 

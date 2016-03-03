@@ -6,6 +6,7 @@ public class TankCollider : MonoBehaviour {
 	//PUBLIC INSTANCE VARIABLES
 	public GameController gameController;
 	public AudioSource collisionSound;
+	public EnemyController enemy;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +20,7 @@ public class TankCollider : MonoBehaviour {
 
 	public void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.CompareTag ("enemy")) {
-			this.gameController.LivesValue--;
+			this.gameController.LivesValue--;	//player loses life
 			//other.gameObject.SetActive (false);
 			this.collisionSound.Play();
 		}
